@@ -403,6 +403,15 @@ heroku open
   heroku logs --tail
   ```
 
+### ❌ បញ្ហាទី ៦៖ `ModuleNotFoundError: No module named 'pkg_resources'` (លើ Render)
+- **មូលហេតុ**: លើ Python 3.12+ (ឬ Default Linux container លើ Render) កញ្ចប់ `setuptools` មិនត្រូវបានដាក់មកជាមួយតាមលំនាំដើមឡើយ ហើយកំណែចាស់របស់ `gunicorn` (e.g. 20.1.0) ព្យាយាម `import pkg_resources`។
+- **ដំណោះស្រាយ**:
+  1. ធ្វើបច្ចុប្បន្នភាព [requirements.txt](file:///Users/thavrakchan/Nextcloud/Work/BBU/Subject/Python/Python%20Project/Lessons_P24/django_lesson/requirements.txt) ដោយដំឡើង `gunicorn>=21.2.0` និងបន្ថែម `setuptools>=68.0.0`
+  2. ក្នុង [build.sh](file:///Users/thavrakchan/Nextcloud/Work/BBU/Subject/Python/Python%20Project/Lessons_P24/django_lesson/build.sh) បន្ថែមបន្ទាត់៖
+     ```bash
+     pip install --upgrade pip setuptools
+     ```
+
 ---
 
 ## ៩. បញ្ជីត្រួតពិនិត្យចុងក្រោយ (Deployment Checklist)

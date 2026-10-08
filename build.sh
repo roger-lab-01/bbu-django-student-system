@@ -6,7 +6,10 @@
 # Exit immediately if a command exits with a non-zero status
 set -o errexit
 
-echo "📦 Installing Python dependencies..."
+echo "📦 Upgrading pip and setuptools (ensures pkg_resources is available)..."
+pip install --upgrade pip setuptools
+
+echo "📦 Installing Python dependencies from requirements.txt..."
 pip install -r requirements.txt
 
 echo "🎨 Collecting static files (WhiteNoise)..."
