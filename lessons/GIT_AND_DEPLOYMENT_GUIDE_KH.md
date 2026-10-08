@@ -412,6 +412,15 @@ heroku open
      pip install --upgrade pip setuptools
      ```
 
+### ❌ បញ្ហាទី ៧៖ `ModuleNotFoundError: No module named 'app'` (លើ Render)
+- **មូលហេតុ**: Render Web Service កំណត់ Start Command លំនាំដើមជា `gunicorn app:app` ដែលស្វែងរកឯកសារឈ្មោះ `app.py` ជំនួសឱ្យ Django WSGI (`student_system.wsgi:application`)។
+- **ដំណោះស្រាយ**:
+  - **វិធីទី ១ (កែក្នុង Dashboard)**: ចូលទៅកាន់ Render Dashboard ➡️ Web Service ➡️ Settings ➡️ Start Command ប្តូរទៅជា៖
+    ```bash
+    gunicorn student_system.wsgi:application
+    ```
+  - **វិធីទី ២ (ស្វ័យប្រវត្តិ)**: គម្រោងយើងមានឯកសារ [app.py](file:///Users/thavrakchan/Nextcloud/Work/BBU/Subject/Python/Python%20Project/Lessons_P24/django_lesson/app.py) រួចជាស្រេចដែលហៅ `from student_system.wsgi import application as app` ដូច្នេះទោះបី Render រត់ `gunicorn app:app` ឬ `gunicorn student_system.wsgi:application` ក៏ដើរដោយជោគជ័យទាំងពីរ។
+
 ---
 
 ## ៩. បញ្ជីត្រួតពិនិត្យចុងក្រោយ (Deployment Checklist)
