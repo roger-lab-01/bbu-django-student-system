@@ -42,7 +42,8 @@ media/profiles/*
 *.log
 server.log
 server_logs/
-
+development_plan/
+lessons/
 # Testing and Coverage
 .tox/
 .nox/
