@@ -191,7 +191,8 @@ git remote add origin https://github.com/YOUR_GITHUB_USERNAME/bbu-django-student
 ```bash
 git push -u origin main
 ```
-*ប្រសិនបើ GitHub សួររកពាក្យសម្ងាត់ សូមប្រើ **Personal Access Token (PAT)** ឬ **GitHub CLI** (`gh auth login`)។*
+*ប្រសិនបើ GitHub សួររកពាក្យសម្ងាត់ សូមប្រើ **Personal Access Token (PAT)** ឬ **GitHub CLI** (`gh auth login`) ឧទាហរណ៍៖ `git remote set-url origin https://ghp_YOUR_TOKEN@github.com/roger-lab-01/bbu-django-student-system.git`។*
+
 
 ---
 
