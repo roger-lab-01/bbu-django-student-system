@@ -251,12 +251,19 @@ POST    /api/enrollments/{id}/complete_enrollment/ - Mark complete
    - ស្ថាបត្យកម្ម Production: Gunicorn + WhiteNoise + PostgreSQL
    - ការដោះស្រាយកំហុស Deployment (CSRF, Allowed Hosts, Static files)
 
-5. **[lessons/PRACTICE_EXERCISES_KH.md](lessons/PRACTICE_EXERCISES_KH.md)** - 60 practical problems:
+5. **[lessons/INDIVIDUAL_ASSIGNMENT_GUIDE_KH.md](lessons/INDIVIDUAL_ASSIGNMENT_GUIDE_KH.md)** - Individual Assignment Guide (ថ្នាក់ A1IT-B103):
+   - មគ្គុទ្ទេសក៍កិច្ចការបុគ្គល៖ Theme Adaptation & Cloud Deployment
+   - ការកែសម្រួល UI/Theme/Branding ដោយរក្សារចនាសម្ព័ន្ធ Core Software
+   - ការ Push ឡើង GitHub និង Deploy លើ Render
+   - របៀបដាក់កិច្ចការលើ Platform [https://bbusrithub.site/](https://bbusrithub.site/)
+   - តារាងពិន្ទុ និងលក្ខខណ្ឌវាយតម្លៃ (Grading Rubric - 100 ពិន្ទុ)
+
+6. **[lessons/PRACTICE_EXERCISES_KH.md](lessons/PRACTICE_EXERCISES_KH.md)** - 60 practical problems:
    - ១០ ឧបាយកលបង្ហាប់ក្នុងផ្នែក
    - Solutions និង explanations
    - Progressively challenging
 
-6. **[scripts/generate_khmer_data.py](scripts/generate_khmer_data.py)** - Data Seeding:
+7. **[scripts/generate_khmer_data.py](scripts/generate_khmer_data.py)** - Data Seeding:
    - Generate realistic Khmer student profiles, IT courses, and enrollments
    - Command: `python manage.py seed_khmer_data --count 1000`
 
@@ -390,6 +397,7 @@ Follow this order for comprehensive learning:
 | [lessons/STATIC_FILES_GUIDE_KH.md](lessons/STATIC_FILES_GUIDE_KH.md) | Complete guide on Static Files setup & usage (មគ្គុទ្ទេសក៍ Static Files) |
 | [lessons/MEDIA_FILES_GUIDE_KH.md](lessons/MEDIA_FILES_GUIDE_KH.md) | Complete guide on Media Files & Uploads (មគ្គុទ្ទេសក៍ Media Files) |
 | [lessons/GIT_AND_DEPLOYMENT_GUIDE_KH.md](lessons/GIT_AND_DEPLOYMENT_GUIDE_KH.md) | Git, GitHub & Cloud Deployment Guide (Render & Heroku) |
+| [lessons/INDIVIDUAL_ASSIGNMENT_GUIDE_KH.md](lessons/INDIVIDUAL_ASSIGNMENT_GUIDE_KH.md) | Individual Assignment Guide (Theme Customization & Render Deployment) |
 | [lessons/PRACTICE_EXERCISES_KH.md](lessons/PRACTICE_EXERCISES_KH.md) | 60+ exercises with solutions (លំហាត់អនុវត្តន៍ និងចម្លើយ) |
 | [lessons/INSTRUCTOR_GUIDE.md](lessons/INSTRUCTOR_GUIDE.md) | Teaching methodology and lesson plans for instructors |
 | [lessons/QUICKSTART.md](lessons/QUICKSTART.md) | 5-minute quickstart guide |
