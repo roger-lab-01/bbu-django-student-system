@@ -1,0 +1,57 @@
+/* Build Bright University (BBU) - Custom Static Stylesheet */
+
+:root {
+    --bbu-primary: #1e3c72;
+    --bbu-secondary: #2a5298;
+    --bbu-accent: #667eea;
+    --bbu-gold: #f6d365;
+}
+
+/* Khmer Font enhancements */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Kantumruy Pro", "Battambang", sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Custom Gradient Header */
+.bbu-gradient-header {
+    background: linear-gradient(135deg, var(--bbu-primary) 0%, var(--bbu-secondary) 100%);
+    color: #ffffff;
+}
+
+/* Student Avatar Styles */
+.student-avatar-thumb {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.student-avatar-placeholder {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e8f0;
+    color: #64748b;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Smooth card shadows */
+.card-bbu {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-bbu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}

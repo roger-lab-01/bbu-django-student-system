@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Student Management System{% endblock %}
+
+{% block content %}
+<div class="jumbotron bg-light p-5 rounded">
+    <h1 class="display-4">📚 ប្រព័ន្ធគ្រប់គ្រងនិស្សិត</h1>
+    <p class="lead">Student Management System by Build Bright University</p>
+    <hr class="my-4">
+    <p>ស្វាគមន៍ដល់ប្រព័ន្ធគ្រប់គ្រងនិស្សិតដែលប្រើ Django Framework។</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">👥 សិស្ស</h5>
+                <h2 class="text-primary">{{ total_students }}</h2>
+                <p class="text-muted">សិស្សសរុប</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'students:student_list' %}" class="btn btn-sm btn-primary">មើលលម្អិត</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">📖 វគ្គ</h5>
+                <h2 class="text-success">{{ total_courses }}</h2>
+                <p class="text-muted">វគ្គសរុប</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'courses:course_list' %}" class="btn btn-sm btn-success">មើលលម្អិត</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">✍️ ការចុះឈ្មោះ</h5>
+                <h2 class="text-info">{{ total_enrollments }}</h2>
+                <p class="text-muted">ការចុះឈ្មោះសរុប</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'enrollments:enrollment_list' %}" class="btn btn-sm btn-info">មើលលម្អិត</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">⚙️ Admin</h5>
+                <h2 class="text-warning">🔧</h2>
+                <p class="text-muted">ផ្ទាំងគ្រប់គ្រង</p>
+            </div>
+            <div class="card-footer">
+                <a href="/admin/" class="btn btn-sm btn-warning">ចូលគ្រប់គ្រង</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <h3>📊 ស្ថានភាព</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>សិស្សដែលសកម្ម:</strong> {{ active_students }}
+            </li>
+            <li class="list-group-item">
+                <strong>វគ្គដែលសកម្ម:</strong> {{ active_courses }}
+            </li>
+        </ul>
+    </div>
+    
+    <div class="col-md-8">
+        <h3>🎯 ដូចម្តេច ចាប់ផ្តើម</h3>
+        <div class="alert alert-info">
+            <h5>ត្រើងយល់ដឹង ប្រព័ន្ធគ្រប់គ្រងនិស្សិត:</h5>
+            <ol>
+                <li>ចូលក្នុង Admin Panel សម្រាប់ management ពេញលេញ</li>
+                <li>ឆ្លើយ Students, Courses, Enrollments pages</li>
+                <li>សាកល្បង REST API នៅលើ /api/ URL</li>
+                <li>អានឯកសារលម្អិតក្នុងថត lessons/ (INSTRUCTIONS_KH.md) សម្រាប់ព័ត៌មានបន្ថែម</li>
+                <li>ធ្វើលំហាត់ក្នុងថត lessons/ (PRACTICE_EXERCISES_KH.md) ដើម្បីរៀនអនុវត្តជាក់ស្តែង</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <h3>🔗 ឯកសារមានប្រយោជន៍</h3>
+        <ul>
+            <li><a href="https://docs.djangoproject.com/" target="_blank">Django Documentation</a></li>
+            <li><a href="https://www.django-rest-framework.org/" target="_blank">Django REST Framework</a></li>
+            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap Documentation</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
