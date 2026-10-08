@@ -262,7 +262,7 @@ POST    /api/enrollments/{id}/complete_enrollment/ - Mark complete
 
 ---
 
-## 🏃 ឧបាយកលបង្ហាប់ដំណើរការ (Quick Start)
+## 🏃 ដំណើរការ (Quick Start)
 
 ### ១. ចាប់ផ្តើម Server
 
@@ -291,7 +291,7 @@ python manage.py runserver
 
 ---
 
-## 🔧 ឧបាយកលបង្ហាប់ Command-Line
+## 🔧 Command-Line
 
 ```bash
 # Create sample data
