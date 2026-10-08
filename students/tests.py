@@ -147,3 +147,18 @@ class RootEndpointsTest(TestCase):
         self.assertEqual(response.json(), {})
 
 
+class SetupTestDataCommandTest(TestCase):
+    def test_setup_test_data_creates_admin_and_data(self):
+        from io import StringIO
+        from django.core.management import call_command
+        from django.contrib.auth import authenticate
+
+        out = StringIO()
+        call_command('setup_test_data', student_count=5, stdout=out)
+        user = authenticate(username='admin', password='admin123456')
+        self.assertIsNotNone(user)
+        self.assertTrue(user.is_superuser)
+        self.assertTrue(user.is_staff)
+        self.assertGreaterEqual(Student.objects.count(), 5)
+
+

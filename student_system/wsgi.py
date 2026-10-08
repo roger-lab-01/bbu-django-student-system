@@ -17,9 +17,10 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'student_system.settings')
 
 application = get_wsgi_application()
 
-# Automatically run database migrations on server startup
-# Ensures tables (students_student, courses_course, etc.) always exist
+# Automatically run database migrations and setup test data on server startup
+# Ensures tables and admin user (admin / admin123456) always exist
 try:
     call_command('migrate', interactive=False)
+    call_command('setup_test_data', student_count=100, interactive=False)
 except Exception as e:
-    print(f"Startup migration notice: {e}", file=sys.stderr)
+    print(f"Startup setup notice: {e}", file=sys.stderr)
